@@ -1,3 +1,12 @@
+/* 
+Quick Sort is a divide-and-conquer sorting algorithm. It works by:
+    =>  Choosing a pivot element from the array.
+    =>  Partitioning the array around the pivot:
+    =>  Elements less than the pivot are placed on the left side.
+    =>  Elements greater than the pivot are placed on the right side.
+    =>  Recursively sorting the left and right sub-arrays.
+*/
+
 // Generate a random array of 10 numbers between 0 and 99
 const numberArray = Array.from({ length: 10 }, () =>
   Math.floor(Math.random() * 100)
