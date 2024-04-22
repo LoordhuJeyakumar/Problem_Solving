@@ -12,9 +12,9 @@ class Node {
 // Define a LinkedList class
 class LinkedList {
   // Constructor function to initialize a new linked list
-  constructor(data = null) {
+  constructor(data) {
     // Initializes an empty linked list or a linked list with the provided data as the head.
-    this.head = new Node(data);
+    this.head = data ? new Node(data) : null;
     this.size = data ? 1 : 0;
   }
 
@@ -103,6 +103,28 @@ class LinkedList {
     }
   }
 
+  insertDataUsingIndex(data, index) {
+    if (index == 0) {
+      this.insertAtHead(data);
+    } else {
+      let current = this.head;
+      for (let i = 0; i < index; i++) {}
+    }
+  }
+
+  reverse() {
+    let prev = null;
+    let current = this.head;
+    while (current) {
+      let nextNode = current.next;
+      current.next = prev;
+      prev = current;
+      current = nextNode;
+    }
+
+    this.head = prev;
+  }
+
   // Function to get the length of the list
   length() {
     let nodes = 0;
@@ -149,11 +171,19 @@ class LinkedList {
       return array; // Return the array
     }
   }
+  print() {
+    if (this.isEmpty()) {
+      console.log("List is empty");
+    } else {
+      let current = this.head;
+      let allDatas = ``;
+      while (current) {
+        allDatas += current.data + " ";
+        current = current.next;
+      }
+      console.log(allDatas);
+    }
+  }
 }
 
-let list = new LinkedList(5);
-list.insertAtHead(10);
-list.insertAtTail(50);
-console.log(list.toArray());
-
-console.log(JSON.stringify(list));
+module.exports = LinkedList;
