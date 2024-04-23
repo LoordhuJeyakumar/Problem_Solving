@@ -28,13 +28,7 @@ class LinkedList {
       this.head = newNode;
       // Increase the size of the list
       this.size++;
-    } 
-
-    if(this.isHaveCycle()){
-      console.log("Cycle detected, cannot insert the list");
-      return;
-    }
-    else {
+    } else {
       // Traverse the list to find the current tail (last node).
       let tail = this.head;
       while (tail.next != null) {
@@ -228,10 +222,6 @@ class LinkedList {
       console.log("List is empty");
     }
 
-    if (this.isHaveCycle()) {
-      console.log("Cycle detected, cannot print the list");
-      return;
-    } else {
       let current = this.head;
       let allDatas = ``;
       while (current) {
@@ -239,7 +229,7 @@ class LinkedList {
         current = current.next;
       }
       console.log(allDatas);
-    }
+    
   }
 }
 
