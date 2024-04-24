@@ -10,5 +10,6 @@
      - >   Solution =>: [deepCloneObject.js](./deepCloneObject.js)
 
 -   Write a function that takes a JSON object and a path (string representing the path to a property in the object, e.g., "person.address.city") and returns the value at that path in the object. Handle cases where the path is invalid.
+     - >   Solution =>: [getDataUsingPath.js](./getDataUsingPath.js)
 
 -   Implement a function to flatten a nested JSON object, i.e., convert it into a flat JSON object where each key is a dot-separated path to a leaf node in the original object.
