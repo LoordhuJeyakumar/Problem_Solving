@@ -13,3 +13,4 @@
      - >   Solution =>: [getDataUsingPath.js](./getDataUsingPath.js)
 
 -   Implement a function to flatten a nested JSON object, i.e., convert it into a flat JSON object where each key is a dot-separated path to a leaf node in the original object.
+      - >   Solution =>: [flattenObject.js](./flattenObject.js)
